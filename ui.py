@@ -1,6 +1,5 @@
 from tkinter import *
 from quiz_brain import QuizBrain
-import time
 THEME_COLOR = "#375362"
 
 class QuizInterface:
@@ -41,7 +40,7 @@ class QuizInterface:
 
     def no(self):
         self.get_feedback(self.quiz.check_answer("False"))
-        self.score_text.config(text=f"Score: {self.quiz.score}/{self.quiz.question_number}")
+        self.score_text.config(text=f"Score: {self.quiz.score}")
 
     def get_feedback(self, is_right):
         if is_right:
